@@ -111,8 +111,31 @@ export default function PackagesPage() {
             ))}
           </div>
 
+          {/* Digital Invitation Promo Banner */}
+          <div className="mt-12 p-6 sm:p-8 bg-[#0b101b] text-white rounded-sm border border-gold-shimmer/40 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center md:text-left">
+              <div className="inline-flex items-center gap-1.5 px-3 py-0.5 bg-gold-shimmer/20 text-gold-shimmer rounded-full text-[10px] uppercase font-bold tracking-wider border border-gold-shimmer/40">
+                <span className="material-symbols-outlined text-xs">stars</span>
+                <span>Layanan Premium Tambahan</span>
+              </div>
+              <h3 className="font-display text-xl sm:text-2xl font-bold">
+                My Dream Digital Invitation (3 Konsep Tematik)
+              </h3>
+              <p className="font-body text-xs sm:text-sm text-white/80 font-light max-w-xl">
+                Lengkapi hari pernikahan Anda dengan undangan digital eksklusif berdesain editorial haute-couture (Elegant, Minimalist, Luxury). Dilengkapi live countdown, RSVP WhatsApp, dan navigasi Google Maps.
+              </p>
+            </div>
+            <a
+              href="/undangan"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs uppercase tracking-widest rounded-sm font-bold transition-all whitespace-nowrap shadow-md"
+            >
+              <span className="material-symbols-outlined text-base">visibility</span>
+              Buka Katalog Undangan Digital
+            </a>
+          </div>
+
           {/* Consultation Banner */}
-          <div className="mt-14 p-6 sm:p-8 bg-gradient-to-r from-primary to-[#0f231e] text-white rounded-sm flex flex-col md:flex-row items-center justify-between gap-6 shadow-md border border-gold-shimmer/30">
+          <div className="mt-6 p-6 sm:p-8 bg-gradient-to-r from-primary to-[#0f231e] text-white rounded-sm flex flex-col md:flex-row items-center justify-between gap-6 shadow-md border border-white/10">
             <div className="space-y-1.5 text-center md:text-left">
               <span className="text-[11px] font-label-md uppercase tracking-[0.2em] text-gold-shimmer font-semibold block">
                 KUSTOMISASI BEBAS

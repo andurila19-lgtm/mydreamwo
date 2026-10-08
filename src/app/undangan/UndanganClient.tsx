@@ -49,6 +49,18 @@ export default function UndanganClient() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const concept = params.get('concept');
+      if (concept === 'Elegant' || concept === 'Minimalist' || concept === 'Luxury') {
+        setSelectedCategory(concept);
+        const matched = templates.find((t) => t.category === concept);
+        if (matched) setActiveTemplate(matched.id);
+      }
+    }
+  }, []);
+
   const templates: TemplateItem[] = [
     {
       id: 'royal-botanical',
@@ -131,7 +143,7 @@ export default function UndanganClient() {
       tagline: 'Kesederhanaan Murni Nan Syahdu',
       price: 'Rp 249.000',
       normalPrice: 'Rp 399.000',
-      image: '/images/mantu-team-hero.webp',
+      image: '/images/team-hero.webp',
       colors: ['#3A5A40', '#A3B18A', '#DAD7CD'],
       description: 'Sentuhan sage green yang tenang dengan tata letak minimalis terstruktur. Sangat cocok untuk akad nikah khidmat dan intimate blessing.',
       couple: 'Reza & Nadya',

@@ -481,7 +481,7 @@ export const packagesData: PackageItem[] = [
     priceRaw: 35000000,
     shortDesc: 'Manajemen acara profesional untuk corporate gathering, gala dinner, product launch, seminar, wisuda, dan festival instansi di Jember.',
     longDesc: 'My Dream Organizer berpengalaman menangani berbagai event perusahaan, instansi BUMN/swasta, dan komunitas. Dari penyusunan konsep tema, tata panggung audiovisual mutakhir, registrasi tamu terstruktur, hingga eksekusi panggung yang memukau.',
-    image: '/images/mantu-team-hero.webp',
+    image: '/images/team-hero.webp',
     venueIncluded: false,
     cateringIncluded: false,
     features: [

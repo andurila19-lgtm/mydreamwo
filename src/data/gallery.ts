@@ -51,7 +51,7 @@ export const galleryData: GalleryItem[] = [
     category: 'Birthday',
     venue: 'Lounge & Function Hall Jember',
     client: 'Valencia & Friends',
-    image: '/images/mantu-team-hero.webp',
+    image: '/images/team-hero.webp',
     description: 'Pesta ulang tahun ke-17 bernuansa youthful glamour dengan lighting effect spektakuler, photobooth 360 interaktif, live DJ, dan games meriah.'
   },
   {
@@ -78,7 +78,7 @@ export const galleryData: GalleryItem[] = [
     category: 'Wedding Coordination',
     venue: 'Royal Hotel Ballroom Jember',
     client: 'My Dream Field Crew',
-    image: '/images/mantu-team-hero.webp',
+    image: '/images/team-hero.webp',
     description: 'Tim solid My Dream Organizer berseragam resmi dan HT terkoneksi mengawal seluruh vendor, memandu orang tua, dan mendampingi pengantin sejak subuh.'
   }
 ];
