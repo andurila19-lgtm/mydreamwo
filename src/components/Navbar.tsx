@@ -107,7 +107,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center min-h-[42px] px-6 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs tracking-widest uppercase transition-colors rounded-sm font-semibold shadow-md"
             >
-              KONSULTASI WA
+              KONSULTASI
             </a>
           </div>
         </div>

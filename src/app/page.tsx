@@ -255,32 +255,30 @@ export default function HomePage() {
             </p>
 
             {/* CTAs: WhatsApp Primary, Portfolio Secondary, and Digital Invitation */}
-            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 max-w-lg mx-auto">
+            <div className="pt-2 sm:pt-4 flex flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto">
               <a
                 href="https://wa.me/6281233779967?text=Halo%20My%20Dream%20Organizer%20Jember%2C%20saya%20ingin%20konsultasi%20wedding%20%26%20event"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs tracking-wider uppercase transition-all rounded-full sm:rounded-sm font-bold shadow-lg hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-2.5 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs tracking-wider uppercase transition-all rounded-sm font-bold shadow-lg hover:-translate-y-0.5"
               >
                 <span className="material-symbols-outlined text-base">chat</span>
-                Konsultasi WhatsApp (0812-3377-9967)
+                Konsultasi
               </a>
-              <div className="flex items-center gap-2 w-full sm:w-auto justify-center">
-                <a
-                  href="/galeri"
-                  className="inline-flex items-center justify-center gap-1.5 flex-1 sm:flex-none px-4 py-2.5 sm:py-3 bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm font-label-md text-[11px] sm:text-xs tracking-wider uppercase transition-all rounded-full sm:rounded-sm font-medium hover:-translate-y-0.5"
-                >
-                  <span className="material-symbols-outlined text-sm">photo_library</span>
-                  Portfolio
-                </a>
-                <a
-                  href="/undangan"
-                  className="inline-flex items-center justify-center gap-1.5 flex-1 sm:flex-none px-4 py-2.5 sm:py-3 bg-black/50 hover:bg-black/70 text-gold-shimmer border border-gold-shimmer/50 backdrop-blur-sm font-label-md text-[11px] sm:text-xs tracking-wider uppercase transition-all rounded-full sm:rounded-sm font-medium hover:-translate-y-0.5"
-                >
-                  <span className="material-symbols-outlined text-sm">mark_email_read</span>
-                  Undangan Digital
-                </a>
-              </div>
+              <a
+                href="/galeri"
+                className="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-2.5 bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm font-label-md text-xs tracking-wider uppercase transition-all rounded-sm font-medium hover:-translate-y-0.5"
+              >
+                <span className="material-symbols-outlined text-base">photo_library</span>
+                Portfolio
+              </a>
+              <a
+                href="/undangan"
+                className="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-2.5 bg-black/50 hover:bg-black/70 text-gold-shimmer border border-gold-shimmer/50 backdrop-blur-sm font-label-md text-xs tracking-wider uppercase transition-all rounded-sm font-medium hover:-translate-y-0.5"
+              >
+                <span className="material-symbols-outlined text-base">mark_email_read</span>
+                Undangan Digital
+              </a>
             </div>
 
             {/* Brand Sub-Badge */}
@@ -953,7 +951,7 @@ export default function HomePage() {
               className="inline-flex items-center justify-center gap-2 min-h-[48px] px-8 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs tracking-widest uppercase transition-all rounded-sm font-bold shadow-lg"
             >
               <span className="material-symbols-outlined text-lg">chat</span>
-              Konsultasi via WhatsApp (0812-3377-9967)
+              Konsultasi Sekarang
             </a>
             <a
               href="/paket"
