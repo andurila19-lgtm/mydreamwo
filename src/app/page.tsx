@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { packagesData } from '@/data/packages';
 import { galleryData } from '@/data/gallery';
 
@@ -218,10 +219,19 @@ export default function HomePage() {
           <div
             key={slide.image + index}
             className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
-            role="img"
-            aria-label={slide.alt}
-          />
+            aria-hidden={index !== currentSlide}
+          >
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority={index === 0}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              sizes="100vw"
+              quality={80}
+              className="object-cover object-center"
+            />
+          </div>
         ))}
 
         {/* Hero Overlay */}
@@ -287,17 +297,22 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Slide Indicators */}
-          <div className="flex justify-center gap-2 mt-8 sm:mt-12">
+          {/* Slide Indicators with accessible touch target (min 44px) */}
+          <div className="flex justify-center items-center gap-1 mt-8 sm:mt-12" role="tablist" aria-label="Slide Banner Pilihan">
             {heroSlides.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentSlide(idx)}
-                className={`h-1.5 transition-all rounded-full ${
-                  idx === currentSlide ? 'w-8 bg-gold-shimmer' : 'w-2 bg-white/40 hover:bg-white/70'
-                }`}
-                aria-label={`Slide ${idx + 1}`}
-              />
+                className="p-3 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-shimmer rounded-full"
+                aria-label={`Lihat Slide ${idx + 1}`}
+                aria-current={idx === currentSlide ? 'true' : 'false'}
+              >
+                <span
+                  className={`h-1.5 transition-all rounded-full block ${
+                    idx === currentSlide ? 'w-8 bg-gold-shimmer' : 'w-2.5 bg-white/40 hover:bg-white/70'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>
@@ -373,10 +388,13 @@ export default function HomePage() {
               >
                 <div>
                   <div className="aspect-[16/10] overflow-hidden bg-black/5 relative">
-                    <img
+                    <Image
                       src={srv.image}
                       alt={srv.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                     <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-sm text-[10px] uppercase font-bold text-gold-shimmer tracking-wider border border-white/10">
                       {srv.badge}
@@ -445,10 +463,12 @@ export default function HomePage() {
               >
                 <div>
                   <div className="aspect-[16/10] overflow-hidden bg-black/5 relative">
-                    <img
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    <Image
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                       src={pkg.image}
                       alt={pkg.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       loading="lazy"
                     />
                     {pkg.badge && (
@@ -676,10 +696,13 @@ export default function HomePage() {
 
                     {/* Prewedding Photo */}
                     <div className="aspect-[16/11] rounded-xl overflow-hidden shadow-xs border border-amber-900/10 relative">
-                      <img
+                      <Image
                         src={currentConceptData.image}
                         alt={`Preview ${currentConceptData.name}`}
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="(max-width: 640px) 280px, 320px"
+                        className="object-cover"
+                        loading="lazy"
                       />
                       {/* Audio simulation badge */}
                       <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-full text-[9px] text-amber-300 flex items-center gap-1">
@@ -795,10 +818,12 @@ export default function HomePage() {
                 href="/galeri"
                 className="group relative block aspect-square overflow-hidden rounded-sm bg-surface-container border border-outline-variant/30 shadow-sm"
               >
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 sm:p-4 text-white">

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
@@ -55,12 +56,13 @@ export default function Navbar() {
             aria-label="My Dream Organizer - Beranda"
           >
             <div className="h-11 w-11 rounded-lg overflow-hidden bg-black border border-amber-400/40 shadow-md group-hover:scale-105 transition-all p-0.5 flex items-center justify-center">
-              <img
+              <Image
                 src="/images/logo.webp"
                 alt="My Dream Organizer"
                 className="w-full h-full object-contain"
                 width={44}
                 height={44}
+                priority
               />
             </div>
             <div className="flex flex-col text-left">
@@ -123,12 +125,13 @@ export default function Navbar() {
           {/* Logo Mobile */}
           <a href="/" className="flex items-center gap-2" aria-label="My Dream Organizer Jember">
             <div className="h-8 w-8 rounded-lg overflow-hidden bg-black border border-amber-400/30 p-0.5 flex items-center justify-center">
-              <img
+              <Image
                 src="/images/logo.webp"
                 alt="My Dream Organizer"
                 className="w-full h-full object-contain"
                 width={32}
                 height={32}
+                priority
               />
             </div>
             <div className="flex flex-col text-left">

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Bodoni_Moda, Open_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
@@ -18,7 +18,15 @@ const openSans = Open_Sans({
   display: 'swap',
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#0a0f1d',
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mydreamwo.reaksy.com'),
   title: "My Dream Organizer | Wedding, Event & Birthday Organizer Jember",
   description: "My Dream Organizer Jember melayani Wedding, Event, dan Birthday dengan konsep yang berkesan dan sesuai kebutuhan Anda. Pasti Nikahmu BEDA!",
   keywords: [
@@ -62,6 +70,8 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
