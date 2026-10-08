@@ -12,8 +12,8 @@ export default function TestFoodPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = `*RESERVASI TEST FOOD KATERING — Galipat WO BOYOLALI*\n\n*Nama:* ${name}\n*Nomor WA:* ${phone}\n*Rencana Tanggal Acara:* ${date}\n*Estimasi Tamu:* ${guestCount} Pax`;
-    window.open(`https://wa.me/6288902968424?text=${encodeURIComponent(msg)}`, '_blank');
+    const msg = `*RESERVASI TEST FOOD KATERING — MY DREAM ORGANIZER JEMBER*\n\n*Nama:* ${name}\n*Nomor WA:* ${phone}\n*Rencana Tanggal Acara:* ${date}\n*Estimasi Tamu:* ${guestCount} Pax`;
+    window.open(`https://wa.me/6281233779967?text=${encodeURIComponent(msg)}`, '_blank');
     setSubmitted(true);
   };
 
@@ -22,7 +22,7 @@ export default function TestFoodPage() {
       <PageHeader
         eyebrow="Cita Rasa Terpilih"
         title="Jadwal &amp; Reservasi Test Food"
-        description="Rasakan langsung kelezatan menu katering prasmanan dan gubukan autentik Boyolali &amp; Solo Raya sebelum Anda memutuskan."
+        description="Rasakan langsung kelezatan menu katering prasmanan dan gubukan autentik di Jember sebelum Anda memutuskan paket acara."
         breadcrumbs={[
           { label: 'Beranda', href: '/' },
           { label: 'Test Food Katering' },
@@ -37,122 +37,125 @@ export default function TestFoodPage() {
             <div className="lg:col-span-6 space-y-6">
               <div className="bg-white p-6 sm:p-8 border border-outline-variant/30 rounded-sm shadow-sm space-y-6">
                 <h2 className="font-display text-xl sm:text-2xl text-primary font-semibold">
-                  Mengapa Wajib Test Food Bersama Galipat?
+                  Mengapa Test Food Bersama My Dream?
                 </h2>
                 <div className="space-y-4">
                   <div className="flex gap-4">
                     <span className="material-symbols-outlined text-gold-shimmer text-2xl flex-shrink-0 pt-0.5">restaurant</span>
                     <div>
-                      <h3 className="font-display text-sm sm:text-base font-semibold text-primary">Kualitas Rasa Konsisten</h3>
-                      <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">Mencicipi langsung olahan menu utama (Dendeng Balado, Sup Pengantin Solo, Bestik Daging Lidah) dan gubukan favorit.</p>
+                      <h3 className="font-display text-sm sm:text-base font-semibold text-primary">Kualitas Rasa &amp; Higienitas</h3>
+                      <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">Mencicipi langsung olahan menu utama nusantara/modern dan aneka stall gubukan favorit para tamu.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <span className="material-symbols-outlined text-gold-shimmer text-2xl flex-shrink-0 pt-0.5">visibility</span>
                     <div>
                       <h3 className="font-display text-sm sm:text-base font-semibold text-primary">Inspeksi Penyajian &amp; Kebersihan</h3>
-                      <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">Melihat langsung standar set-up peralatan chafing dish, garnish bunga segar, dan seragam rapi staf katering.</p>
+                      <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">Melihat langsung standar set-up peralatan chafing dish, garnish, dan profesionalitas seragam tim katering.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <span className="material-symbols-outlined text-gold-shimmer text-2xl flex-shrink-0 pt-0.5">diversity_1</span>
                     <div>
                       <h3 className="font-display text-sm sm:text-base font-semibold text-primary">Konsultasi Selera Keluarga</h3>
-                      <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">Diskusikan tingkat kepedasan, penambahan menu vegetarian, atau hidangan tradisional khusus adat bersama chef kami.</p>
+                      <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">Diskusi fleksibel bersama food consultant My Dream Organizer untuk menyesuaikan tingkat kepedasan, tekstur, dan komposisi menu.</p>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="bg-surface-container-low p-6 border border-outline-variant/30 space-y-2 rounded-sm">
-                <h3 className="font-display text-sm sm:text-base font-semibold text-primary">Jadwal Sesi Test Food Reguler</h3>
-                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed font-light">
-                  Setiap hari <strong>Sabtu &amp; Minggu (Pukul 12.00 - 14.80 WIB)</strong> di Dapur Kurasi Galipat Boyolali atau pada saat simulasi event berlangsung.
-                </p>
+                <div className="p-4 bg-surface-container-low border border-outline-variant/30 rounded-sm space-y-1 text-xs text-on-surface-variant">
+                  <p className="font-bold text-primary">Jadwal Sesi Test Food:</p>
+                  <p>Setiap akhir pekan (Sabtu &amp; Minggu) atau dijadwalkan secara privat bersama tim My Dream Organizer di Jember.</p>
+                </div>
               </div>
             </div>
 
-            {/* Right: Reservation Form */}
+            {/* Right: Registration Form */}
             <div className="lg:col-span-6">
-              <div className="bg-white p-6 sm:p-8 md:p-10 border-2 border-gold-shimmer/50 shadow-md rounded-sm space-y-6">
+              <div className="bg-white p-6 sm:p-8 border border-outline-variant/30 rounded-sm shadow-sm space-y-5">
                 <div>
-                  <h3 className="font-display text-xl sm:text-2xl text-primary font-semibold">Formulir Pendaftaran Test Food</h3>
-                  <p className="text-xs sm:text-sm text-on-surface-variant font-light mt-1">
-                    Silakan isi data calon pengantin untuk mengonfirmasi meja reservasi VIP Anda.
-                  </p>
+                  <span className="font-label-md text-secondary uppercase tracking-[0.2em] text-xs font-semibold block mb-1">
+                    Formulir Reservasi
+                  </span>
+                  <h3 className="font-display text-xl sm:text-2xl text-primary font-semibold">
+                    Daftar Sesi Food Tasting Gratis
+                  </h3>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-[11px] font-semibold uppercase tracking-wider text-primary mb-1.5">
-                      Nama Calon Pengantin / Perwakilan *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Contoh: Raras & Dimas"
-                      className="w-full px-4 min-h-[44px] bg-surface-container-low border border-outline-variant/40 text-sm focus:outline-none focus:border-primary rounded-sm"
-                    />
+                {submitted ? (
+                  <div className="p-6 bg-emerald-50 border border-emerald-200 rounded-sm text-center space-y-2">
+                    <span className="material-symbols-outlined text-emerald-600 text-3xl">check_circle</span>
+                    <h4 className="font-display text-base font-bold text-emerald-900">Reservasi Terkirim!</h4>
+                    <p className="text-xs text-emerald-800">
+                      Pendaftaran Anda telah diteruskan ke WhatsApp Concierge My Dream Organizer Jember. Tim kami akan segera menghubungi Anda.
+                    </p>
                   </div>
-
-                  <div>
-                    <label className="block text-[11px] font-semibold uppercase tracking-wider text-primary mb-1.5">
-                      Nomor WhatsApp Aktif *
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      placeholder="0812xxxxxxx"
-                      className="w-full px-4 min-h-[44px] bg-surface-container-low border border-outline-variant/40 text-sm focus:outline-none focus:border-primary rounded-sm"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <label className="block text-[11px] font-semibold uppercase tracking-wider text-primary mb-1.5">
-                        Rencana Tanggal Acara
+                      <label className="block text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+                        Nama Lengkap / Calon Pengantin
                       </label>
                       <input
                         type="text"
-                        value={date}
-                        onChange={(e) => setDate(e.target.value)}
-                        placeholder="Contoh: Oktober 2025"
-                        className="w-full px-4 min-h-[44px] bg-surface-container-low border border-outline-variant/40 text-sm focus:outline-none focus:border-primary rounded-sm"
+                        required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Contoh: Amanda &amp; Farhan"
+                        className="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-outline-variant/50 rounded-sm focus:outline-none focus:border-gold-shimmer"
                       />
                     </div>
+
                     <div>
-                      <label className="block text-[11px] font-semibold uppercase tracking-wider text-primary mb-1.5">
-                        Estimasi Undangan
+                      <label className="block text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+                        Nomor WhatsApp Aktif
                       </label>
-                      <select
-                        value={guestCount}
-                        onChange={(e) => setGuestCount(e.target.value)}
-                        className="w-full px-4 min-h-[44px] bg-surface-container-low border border-outline-variant/40 text-sm focus:outline-none focus:border-primary rounded-sm"
-                      >
-                        <option value="300">300 Pax (Intimate)</option>
-                        <option value="500">500 Pax (Sedang)</option>
-                        <option value="800">800 Pax (Ageng)</option>
-                        <option value="1000+">1.000+ Pax (Akbar)</option>
-                      </select>
+                      <input
+                        type="tel"
+                        required
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        placeholder="Contoh: 0812-XXXX-XXXX"
+                        className="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-outline-variant/50 rounded-sm focus:outline-none focus:border-gold-shimmer"
+                      />
                     </div>
-                  </div>
 
-                  <button
-                    type="submit"
-                    className="inline-flex items-center justify-center min-h-[46px] w-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-xs uppercase tracking-widest rounded-sm font-semibold transition-colors shadow-sm mt-2"
-                  >
-                    Kirim Reservasi Sesi Test Food
-                  </button>
-                </form>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+                          Rencana Tanggal Acara
+                        </label>
+                        <input
+                          type="date"
+                          value={date}
+                          onChange={(e) => setDate(e.target.value)}
+                          className="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-outline-variant/50 rounded-sm focus:outline-none focus:border-gold-shimmer"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+                          Estimasi Jumlah Tamu
+                        </label>
+                        <select
+                          value={guestCount}
+                          onChange={(e) => setGuestCount(e.target.value)}
+                          className="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-outline-variant/50 rounded-sm focus:outline-none focus:border-gold-shimmer"
+                        >
+                          <option value="200">200 Pax (Intimate)</option>
+                          <option value="500">500 Pax (Standard)</option>
+                          <option value="800">800 Pax (Medium)</option>
+                          <option value="1000+">1.000+ Pax (Grand)</option>
+                        </select>
+                      </div>
+                    </div>
 
-                {submitted && (
-                  <div className="p-4 bg-surface-container-high border-l-4 border-gold-shimmer text-xs text-primary font-medium rounded-sm">
-                    Pendaftaran Anda telah diteruskan ke WhatsApp Concierge Galipat Boyolali. Sampai jumpa di sesi test food!
-                  </div>
+                    <button
+                      type="submit"
+                      className="w-full py-3.5 bg-primary hover:bg-primary-container text-on-primary font-label-md text-xs uppercase tracking-widest rounded-sm font-semibold transition-colors mt-2"
+                    >
+                      Kirim Reservasi via WhatsApp
+                    </button>
+                  </form>
                 )}
               </div>
             </div>

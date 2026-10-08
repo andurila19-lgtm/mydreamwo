@@ -2,28 +2,28 @@ import React from 'react';
 import PageHeader from '@/components/PageHeader';
 
 export const metadata = {
-  title: 'Wedding Show & Showcase Pameran — Galipat Wedding Organizer Boyolali',
-  description: 'Jadwal pameran dan wedding showcase Galipat di Boyolali dan Solo Raya. Dapatkan promo eksklusif, cashback vendor, dan konsultasi gratis.',
+  title: 'Wedding Show & Showcase Expo — My Dream Organizer Jember',
+  description: 'Jadwal pameran dan wedding showcase My Dream Organizer di Jember dan Jawa Timur. Dapatkan promo eksklusif, cashback vendor, dan konsultasi gratis.',
 };
 
 export default function WeddingShowPage() {
   const events = [
     {
-      title: 'Galipat Royal Heritage Wedding Showcase 2025',
-      date: '18 - 20 Oktober 2025',
-      location: 'Grand Ballroom The Heritage Boyolali',
+      title: 'My Dream Grand Wedding & Event Expo 2025',
+      date: '24 - 26 Oktober 2025',
+      location: 'Grand Ballroom Aston Hotel Jember',
       time: '10.00 - 21.00 WIB',
-      desc: 'Pameran pernikahan terbesar di Boyolali menghadirkan 35+ vendor kurasi terbaik: dekorasi pelaminan gebyok, perias paes ageng, katering nusantara, dan fotografer profesional.',
-      promo: 'Cashback Vendor s/d Rp 4.800.000 + Free Upgrade Photobooth',
+      desc: 'Pameran pernikahan dan event terbesar di Jember menghadirkan puluhan vendor kurasi terbaik: dekorasi pelaminan modern & adat, katering premium, gaun pengantin, lighting panggung, dan fotografi.',
+      promo: 'Cashback Vendor s/d Rp 5.000.000 + Free Upgrade Photobooth 360',
       status: 'Akan Datang',
     },
     {
-      title: 'Solo Raya Intimate Wedding Fair',
-      date: '15 - 17 November 2025',
-      location: 'Pendopo Ageng Karanggeneng Boyolali',
+      title: 'Jember Intimate Wedding & Birthday Fair',
+      date: '21 - 23 November 2025',
+      location: 'Dafam Fortuna Convention Hall Jember',
       time: '11.00 - 20.00 WIB',
-      desc: 'Showcase khusus bagi calon pengantin yang mendambakan konsep intimate wedding berbalut nuansa tradisi Jawa klasik dan modern minimalis.',
-      promo: 'Free Testing Food Katering & Konsultasi Adat Gratis',
+      desc: 'Showcase khusus bagi calon pengantin dan keluarga yang mendambakan konsep intimate wedding berbalut estetika modern, serta perayaan ulang tahun Sweet 17th yang berkesan.',
+      promo: 'Free Testing Food Katering & Konsultasi Konsep Acara Gratis',
       status: 'Akan Datang',
     },
   ];
@@ -32,8 +32,8 @@ export default function WeddingShowPage() {
     <main>
       <PageHeader
         eyebrow="Pameran &amp; Event"
-        title="Wedding Show Galipat"
-        description="Temui tim Galipat dan vendor-vendor pilihan kami secara langsung di acara pameran pernikahan Boyolali &amp; Solo Raya."
+        title="Wedding Show &amp; Showcase"
+        description="Temui tim My Dream Organizer dan vendor-vendor kurasi kami secara langsung di acara wedding expo di Jember."
         breadcrumbs={[
           { label: 'Beranda', href: '/' },
           { label: 'Wedding Show' },
@@ -61,38 +61,34 @@ export default function WeddingShowPage() {
                     {ev.title}
                   </h2>
 
-                  <div className="space-y-2 text-xs sm:text-sm text-on-surface-variant font-body">
-                    <div className="flex items-center gap-2.5">
-                      <span className="material-symbols-outlined text-primary text-base">calendar_month</span>
+                  <div className="space-y-2 text-xs sm:text-sm text-on-surface-variant">
+                    <div className="flex items-center gap-2">
+                      <span className="material-symbols-outlined text-gold-shimmer text-base">calendar_today</span>
                       <span>{ev.date}</span>
                     </div>
-                    <div className="flex items-center gap-2.5">
-                      <span className="material-symbols-outlined text-primary text-base">location_on</span>
+                    <div className="flex items-center gap-2">
+                      <span className="material-symbols-outlined text-gold-shimmer text-base">location_on</span>
                       <span>{ev.location}</span>
                     </div>
                   </div>
 
-                  <p className="font-body text-xs sm:text-sm text-on-surface-variant leading-relaxed font-light">
+                  <p className="font-body text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">
                     {ev.desc}
                   </p>
 
-                  <div className="p-4 bg-surface-container-low border border-secondary/20 rounded-sm">
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-secondary block mb-1">
-                      Penawaran Eksklusif di Tempat:
-                    </span>
-                    <p className="text-xs sm:text-sm font-semibold text-primary">{ev.promo}</p>
+                  <div className="p-3 bg-amber-50 border border-amber-200 rounded-sm text-xs text-amber-900 font-medium">
+                    🎁 <strong>Promo Spesial:</strong> {ev.promo}
                   </div>
                 </div>
 
-                <div className="pt-2">
+                <div className="pt-4 border-t border-outline-variant/20">
                   <a
-                    href={`https://wa.me/6288902968424?text=${encodeURIComponent(
-                      `Halo Marketing Galipat WO, saya ingin reservasi tiket / undangan khusus untuk ${ev.title}`
-                    )}`}
+                    href={`https://wa.me/6281233779967?text=${encodeURIComponent('Halo My Dream Organizer Jember, saya ingin mendaftar undangan gratis untuk acara: ' + ev.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center min-h-[44px] w-full bg-primary text-on-primary hover:bg-primary-container font-label-md text-xs uppercase tracking-widest rounded-sm font-semibold transition-colors shadow-sm"
+                    className="inline-flex items-center justify-center gap-2 w-full py-3 bg-primary hover:bg-primary-container text-on-primary font-label-md text-xs uppercase tracking-widest rounded-sm font-semibold transition-colors"
                   >
+                    <span className="material-symbols-outlined text-base">confirmation_number</span>
                     Daftar Undangan VIP Gratis
                   </a>
                 </div>

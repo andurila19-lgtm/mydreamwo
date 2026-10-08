@@ -12,9 +12,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const tip = tipsData.find((t) => t.slug === slug);
-  if (!tip) return { title: 'Artikel Tidak Ditemukan | Galipat' };
+  if (!tip) return { title: 'Artikel Tidak Ditemukan | My Dream Organizer' };
   return {
-    title: `${tip.title} — Tips Pernikahan | Galipat`,
+    title: `${tip.title} — My Dream Organizer Jember`,
     description: tip.excerpt,
   };
 }
@@ -35,7 +35,7 @@ export default async function TipDetailPage({ params }: { params: Promise<{ slug
         description={`Dipublikasikan pada ${tip.date} • Estimasi baca ${tip.readTime}`}
         breadcrumbs={[
           { label: 'Beranda', href: '/' },
-          { label: 'Tips Pernikahan', href: '/tips' },
+          { label: 'Tips & Panduan', href: '/tips' },
           { label: tip.title },
         ]}
       />
@@ -58,23 +58,20 @@ export default async function TipDetailPage({ params }: { params: Promise<{ slug
                 {paragraph}
               </p>
             ))}
-          </div>
 
-          <div className="mt-10 sm:mt-12 p-6 sm:p-8 bg-surface-container-low border border-outline-variant/30 text-center space-y-4 rounded-sm">
-            <h3 className="font-display text-lg sm:text-xl text-primary font-semibold">
-              Ingin Berkonsultasi Seputar Konsep Acara Anda?
-            </h3>
-            <p className="text-xs sm:text-sm text-on-surface-variant font-light max-w-xl mx-auto leading-relaxed">
-              Tim kurator Galipat siap mendampingi Anda memilih adat yang tepat, menghitung porsi katering, dan menyusun rundown hari-H.
-            </p>
-            <div className="pt-2">
+            <div className="pt-8 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span className="text-xs text-secondary font-semibold uppercase tracking-wider block">Konsultasi Gratis</span>
+                <p className="font-display text-base font-bold text-primary">Ingin mewujudkan konsep seperti ini di acara Anda?</p>
+              </div>
               <a
-                href="https://wa.me/6288902968424?text=Halo%20Marketing%20Galipat%20WO%2C%20saya%20ingin%20konsultasi%20pernikahan"
+                href={`https://wa.me/6281233779967?text=${encodeURIComponent('Halo My Dream Organizer Jember, saya membaca artikel ' + tip.title + ' dan ingin konsultasi lebih lanjut.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center min-h-[44px] bg-primary hover:bg-primary-container text-on-primary px-8 font-label-md uppercase tracking-widest text-xs rounded-sm font-semibold transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs uppercase tracking-wider font-bold rounded-sm shadow transition-colors"
               >
-                Konsultasi WhatsApp Sekarang
+                <span className="material-symbols-outlined text-base">chat</span>
+                Tanya My Dream Organizer
               </a>
             </div>
           </div>

@@ -26,7 +26,7 @@ export default function WeddingCalculatorPage() {
   };
 
   const handleConsult = () => {
-    const msg = `*SIMULASI ESTIMASI BIAYA WEDDING CALCULATOR — Galipat WO BOYOLALI*
+    const msg = `*SIMULASI ESTIMASI BIAYA EVENT & WEDDING — MY DREAM ORGANIZER JEMBER*
 
 *Jumlah Undangan:* ${guests} Pax
 *Estimasi Katering:* ${formatRupiah(guests * cateringTier)} (@ ${formatRupiah(cateringTier)}/pax)
@@ -34,21 +34,21 @@ export default function WeddingCalculatorPage() {
 *Estimasi Dekorasi:* ${formatRupiah(decorTier)}
 *Estimasi Dokumentasi:* ${formatRupiah(docTier)}
 *Estimasi Rias & Busana:* ${formatRupiah(makeupTier)}
-*Estimasi WO Management:* ${formatRupiah(woService)}
+*Estimasi Organizer Service:* ${formatRupiah(woService)}
 
 *TOTAL ESTIMASI:* ${formatRupiah(totalEstimate)}
 
-_Mohon informasi ketersediaan jadwal dan rekomendasi vendor terbaik Galipat._`;
+_Mohon informasi ketersediaan tanggal dan rekomendasi vendor terbaik dari My Dream Organizer Jember._`;
 
-    window.open(`https://wa.me/6288902968424?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/6281233779967?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   return (
     <main>
       <PageHeader
         eyebrow="Simulasi Biaya Transparan"
-        title="Wedding Calculator Galipat"
-        description="Hitung perkiraan kebutuhan anggaran pernikahan Anda di Boyolali &amp; Solo Raya secara transparan dan terukur."
+        title="Kalkulator Estimasi Acara"
+        description="Hitung perkiraan kebutuhan anggaran pernikahan dan event Anda di Jember secara transparan dan terukur bersama My Dream Organizer."
         breadcrumbs={[
           { label: 'Beranda', href: '/' },
           { label: 'Wedding Calculator' },
@@ -59,187 +59,153 @@ _Mohon informasi ketersediaan jadwal dan rekomendasi vendor terbaik Galipat._`;
         <div className="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             
-            {/* Left: Input Form / Sliders */}
-            <div className="lg:col-span-7 bg-white p-6 sm:p-8 md:p-10 border border-outline-variant/30 shadow-sm space-y-7 rounded-sm">
-              
-              {/* Guest Count */}
+            {/* Input Controls */}
+            <div className="lg:col-span-7 bg-white p-6 sm:p-8 border border-outline-variant/30 rounded-sm shadow-sm space-y-6">
               <div>
-                <div className="flex justify-between items-center mb-2.5">
-                  <label className="text-xs sm:text-sm font-semibold uppercase text-primary tracking-wider">Jumlah Undangan (Tamu)</label>
-                  <span className="font-display text-base sm:text-lg font-bold text-secondary">{guests} Pax</span>
+                <span className="font-label-md text-secondary uppercase tracking-[0.2em] text-xs font-semibold block mb-1">
+                  Parameter Anggaran
+                </span>
+                <h2 className="font-display text-xl sm:text-2xl text-primary font-semibold">
+                  Sesuaikan Komponen Acara Anda
+                </h2>
+              </div>
+
+              {/* Guest Count Slider */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center text-xs font-semibold text-primary">
+                  <span>Perkiraan Tamu / Pax Undangan:</span>
+                  <span className="text-secondary text-sm font-bold">{guests} Orang</span>
                 </div>
                 <input
                   type="range"
-                  min={200}
-                  max={1500}
-                  step={50}
+                  min="100"
+                  max="1500"
+                  step="50"
                   value={guests}
                   onChange={(e) => setGuests(Number(e.target.value))}
-                  className="w-full accent-primary h-2 bg-surface-container-high rounded cursor-pointer"
-                  aria-label="Geser jumlah tamu undangan"
+                  className="w-full accent-gold-shimmer cursor-pointer"
                 />
-                <div className="flex justify-between text-[11px] text-on-surface-variant/70 mt-1.5 font-body">
-                  <span>200 Pax (Intimate)</span>
-                  <span>800 Pax (Sedang)</span>
-                  <span>1.500 Pax (Ageng)</span>
+                <div className="flex justify-between text-[10px] text-on-surface-variant/70">
+                  <span>100 Pax (Intimate)</span>
+                  <span>500 Pax</span>
+                  <span>1.000 Pax</span>
+                  <span>1.500 Pax</span>
                 </div>
               </div>
 
-              {/* Venue Selection */}
-              <div>
-                <label className="block text-xs sm:text-sm font-semibold uppercase text-primary tracking-wider mb-3">Tipe Lokasi / Venue</label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {[
-                    { name: 'Rumah / Gedung Lokal', price: 6000000 },
-                    { name: 'Pendopo Joglo Klasik', price: 15000000 },
-                    { name: 'Grand Ballroom Hotel', price: 28000000 },
-                  ].map((v) => (
-                    <button
-                      key={v.name}
-                      type="button"
-                      onClick={() => setVenueType(v.price)}
-                      className={`p-3.5 sm:p-4 border text-left rounded-sm transition-colors cursor-pointer min-h-[64px] ${
-                        venueType === v.price
-                          ? 'border-primary bg-primary/5 text-primary font-semibold ring-1 ring-primary'
-                          : 'border-outline-variant/30 text-on-surface-variant hover:border-gold-shimmer'
-                      }`}
-                    >
-                      <p className="text-xs font-semibold leading-tight">{v.name}</p>
-                      <p className="text-xs text-secondary font-medium mt-1">{formatRupiah(v.price)}</p>
-                    </button>
-                  ))}
-                </div>
+              {/* Catering Tier Select */}
+              <div className="space-y-1.5">
+                <label className="block text-xs font-semibold text-primary">Menu Katering Per Pax:</label>
+                <select
+                  value={cateringTier}
+                  onChange={(e) => setCateringTier(Number(e.target.value))}
+                  className="w-full p-2.5 text-xs sm:text-sm border border-outline-variant/50 rounded-sm focus:outline-none focus:border-gold-shimmer"
+                >
+                  <option value={50000}>Prasmanan Hemat (Rp 50.000 / pax)</option>
+                  <option value={65000}>Prasmanan Favorit + Stall (Rp 65.000 / pax)</option>
+                  <option value={85000}>Prasmanan Premium + 4 Stall (Rp 85.000 / pax)</option>
+                  <option value={110000}>Royal Grand Buffet + 6 Stall (Rp 110.000 / pax)</option>
+                </select>
               </div>
 
-              {/* Catering Tier */}
-              <div>
-                <label className="block text-xs sm:text-sm font-semibold uppercase text-primary tracking-wider mb-3">Pilihan Menu Katering (Per Pax)</label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {[
-                    { name: 'Standar Nusantara', price: 55000 },
-                    { name: 'Tradisi + Gubukan', price: 65000 },
-                    { name: 'Royal Feast Istimewa', price: 85000 },
-                  ].map((c) => (
-                    <button
-                      key={c.name}
-                      type="button"
-                      onClick={() => setCateringTier(c.price)}
-                      className={`p-3.5 sm:p-4 border text-left rounded-sm transition-colors cursor-pointer min-h-[64px] ${
-                        cateringTier === c.price
-                          ? 'border-primary bg-primary/5 text-primary font-semibold ring-1 ring-primary'
-                          : 'border-outline-variant/30 text-on-surface-variant hover:border-gold-shimmer'
-                      }`}
-                    >
-                      <p className="text-xs font-semibold leading-tight">{c.name}</p>
-                      <p className="text-xs text-secondary font-medium mt-1">{formatRupiah(c.price)}/pax</p>
-                    </button>
-                  ))}
-                </div>
+              {/* Venue Budget */}
+              <div className="space-y-1.5">
+                <label className="block text-xs font-semibold text-primary">Alokasi Venue / Gedung di Jember:</label>
+                <select
+                  value={venueType}
+                  onChange={(e) => setVenueType(Number(e.target.value))}
+                  className="w-full p-2.5 text-xs sm:text-sm border border-outline-variant/50 rounded-sm focus:outline-none focus:border-gold-shimmer"
+                >
+                  <option value={0}>Rumah Pribadi / Venue Sendiri (Rp 0)</option>
+                  <option value={10000000}>Gedung Serbaguna (Rp 10.000.000)</option>
+                  <option value={18000000}>Convention Hall / Outdoor Garden (Rp 18.000.000)</option>
+                  <option value={30000000}>Ballroom Hotel Bintang 4 di Jember (Rp 30.000.000)</option>
+                </select>
               </div>
 
-              {/* Decoration Tier */}
-              <div>
-                <label className="block text-xs sm:text-sm font-semibold uppercase text-primary tracking-wider mb-3">Konsep Dekorasi Pelaminan</label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {[
-                    { name: 'Modern Minimalis', price: 12000000 },
-                    { name: 'Gebyok Ukir Solo', price: 18000000 },
-                    { name: 'Grand Florist Mewah', price: 30000000 },
-                  ].map((d) => (
-                    <button
-                      key={d.name}
-                      type="button"
-                      onClick={() => setDecorTier(d.price)}
-                      className={`p-3.5 sm:p-4 border text-left rounded-sm transition-colors cursor-pointer min-h-[64px] ${
-                        decorTier === d.price
-                          ? 'border-primary bg-primary/5 text-primary font-semibold ring-1 ring-primary'
-                          : 'border-outline-variant/30 text-on-surface-variant hover:border-gold-shimmer'
-                      }`}
-                    >
-                      <p className="text-xs font-semibold leading-tight">{d.name}</p>
-                      <p className="text-xs text-secondary font-medium mt-1">{formatRupiah(d.price)}</p>
-                    </button>
-                  ))}
-                </div>
+              {/* Decor Tier */}
+              <div className="space-y-1.5">
+                <label className="block text-xs font-semibold text-primary">Dekorasi &amp; Panggung:</label>
+                <select
+                  value={decorTier}
+                  onChange={(e) => setDecorTier(Number(e.target.value))}
+                  className="w-full p-2.5 text-xs sm:text-sm border border-outline-variant/50 rounded-sm focus:outline-none focus:border-gold-shimmer"
+                >
+                  <option value={12000000}>Dekorasi Minimalist Elegan (Rp 12.000.000)</option>
+                  <option value={18000000}>Dekorasi Modern Tematik Florist (Rp 18.000.000)</option>
+                  <option value={28000000}>Grand Pelaminan Full Fresh Flower &amp; Lighting (Rp 28.000.000)</option>
+                </select>
               </div>
 
-              {/* Documentation Tier */}
-              <div>
-                <label className="block text-xs sm:text-sm font-semibold uppercase text-primary tracking-wider mb-3">Dokumentasi Foto &amp; Video</label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {[
-                    { name: 'Standard (Foto + Video Teaser)', price: 8500000 },
-                    { name: 'Cinematic Drone + Album Premium', price: 15000000 },
-                  ].map((doc) => (
-                    <button
-                      key={doc.name}
-                      type="button"
-                      onClick={() => setDocTier(doc.price)}
-                      className={`p-3.5 sm:p-4 border text-left rounded-sm transition-colors cursor-pointer min-h-[64px] ${
-                        docTier === doc.price
-                          ? 'border-primary bg-primary/5 text-primary font-semibold ring-1 ring-primary'
-                          : 'border-outline-variant/30 text-on-surface-variant hover:border-gold-shimmer'
-                      }`}
-                    >
-                      <p className="text-xs font-semibold leading-tight">{doc.name}</p>
-                      <p className="text-xs text-secondary font-medium mt-1">{formatRupiah(doc.price)}</p>
-                    </button>
-                  ))}
-                </div>
+              {/* Documentation */}
+              <div className="space-y-1.5">
+                <label className="block text-xs font-semibold text-primary">Dokumentasi Foto &amp; Video:</label>
+                <select
+                  value={docTier}
+                  onChange={(e) => setDocTier(Number(e.target.value))}
+                  className="w-full p-2.5 text-xs sm:text-sm border border-outline-variant/50 rounded-sm focus:outline-none focus:border-gold-shimmer"
+                >
+                  <option value={5500000}>Standard Foto &amp; Highlight Video (Rp 5.500.000)</option>
+                  <option value={8500000}>Cinematic Video, Drone &amp; Album Kolase (Rp 8.500.000)</option>
+                  <option value={14000000}>Premium Multi-Camera &amp; Same Day Edit (Rp 14.000.000)</option>
+                </select>
               </div>
-
             </div>
 
-            {/* Right: Live Result Box */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="bg-primary text-on-primary p-6 sm:p-8 md:p-9 border border-white/10 rounded-sm shadow-md lg:sticky lg:top-24 space-y-5">
-                <span className="font-label-md text-gold-shimmer uppercase tracking-widest text-xs block font-semibold">
-                  Hasil Estimasi Anggaran
-                </span>
-                <h2 className="font-display text-2xl sm:text-3xl text-white font-semibold leading-tight">Ringkasan Biaya</h2>
+            {/* Summary Box */}
+            <div className="lg:col-span-5">
+              <div className="bg-[#0f172a] text-white p-6 sm:p-8 rounded-sm shadow-xl space-y-6 sticky top-28 border border-white/10">
+                <div>
+                  <span className="text-[10px] uppercase tracking-widest text-gold-shimmer font-bold block mb-1">
+                    Ringkasan Simulasi
+                  </span>
+                  <h3 className="font-display text-xl sm:text-2xl font-bold">
+                    Perkiraan Total Investasi
+                  </h3>
+                </div>
 
-                <div className="space-y-2.5 text-xs sm:text-sm border-t border-b border-white/15 py-4 font-body">
-                  <div className="flex justify-between">
-                    <span className="text-white/75">Katering ({guests} Pax):</span>
+                <div className="py-4 border-y border-white/10 space-y-2 text-xs">
+                  <div className="flex justify-between text-white/70">
+                    <span>Katering ({guests} pax):</span>
                     <span className="font-semibold text-white">{formatRupiah(guests * cateringTier)}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-white/75">Sewa Venue:</span>
+                  <div className="flex justify-between text-white/70">
+                    <span>Venue:</span>
                     <span className="font-semibold text-white">{formatRupiah(venueType)}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-white/75">Dekorasi:</span>
+                  <div className="flex justify-between text-white/70">
+                    <span>Dekorasi:</span>
                     <span className="font-semibold text-white">{formatRupiah(decorTier)}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-white/75">Dokumentasi:</span>
+                  <div className="flex justify-between text-white/70">
+                    <span>Dokumentasi:</span>
                     <span className="font-semibold text-white">{formatRupiah(docTier)}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-white/75">Makeup &amp; Busana:</span>
+                  <div className="flex justify-between text-white/70">
+                    <span>Rias &amp; Busana:</span>
                     <span className="font-semibold text-white">{formatRupiah(makeupTier)}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-white/75">WO Management (Hari-H):</span>
+                  <div className="flex justify-between text-white/70">
+                    <span>Organizer Management:</span>
                     <span className="font-semibold text-white">{formatRupiah(woService)}</span>
                   </div>
                 </div>
 
-                <div>
-                  <span className="text-xs text-white/60 uppercase tracking-widest block">Perkiraan Total Investasi:</span>
-                  <p className="font-display text-2xl sm:text-3xl md:text-4xl text-gold-shimmer font-bold mt-1">
+                <div className="text-center pt-2">
+                  <span className="text-[10px] uppercase tracking-wider text-white/60 block">Total Estimasi Anggaran:</span>
+                  <p className="font-display text-2xl sm:text-3xl text-gold-shimmer font-bold mt-1">
                     {formatRupiah(totalEstimate)}
                   </p>
                 </div>
 
                 <button
                   onClick={handleConsult}
-                  className="inline-flex items-center justify-center min-h-[46px] w-full bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs uppercase tracking-widest rounded-sm font-semibold transition-colors shadow-sm cursor-pointer"
+                  className="w-full py-3.5 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs uppercase tracking-widest rounded-sm font-bold shadow-md transition-colors"
                 >
-                  Konsultasikan Anggaran via WhatsApp
+                  Konsultasikan Simulasi Ini via WA
                 </button>
-                <p className="text-[11px] text-white/50 text-center leading-relaxed font-light">
-                  *Simulasi awal ini dapat disesuaikan kembali dengan kapasitas gedung dan pilihan vendor keluarga.
+                <p className="text-[10px] text-center text-white/50">
+                  Hasil simulasi bersifat estimasi acuan. Tim My Dream Organizer siap menyesuaikan dengan budget nyata Anda.
                 </p>
               </div>
             </div>

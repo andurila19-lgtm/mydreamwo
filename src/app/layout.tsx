@@ -19,12 +19,38 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Paket Pernikahan Boyolali — Wedding Organizer Terbaik | Galipat Wedding Organizer",
-  description: "Paket Pernikahan Boyolali & Solo Raya dari Galipat Wedding Organizer — WO profesional terpercaya. Pilihan Permata, Zamrud, Mutiara, catering, dekorasi, vendor kurasi. Konsultasi gratis!",
-  keywords: ["paket pernikahan boyolali", "wedding organizer boyolali", "WO solo raya", "galipat wedding organizer", "galipat wo"],
+  title: "My Dream Organizer | Wedding, Event & Birthday Organizer Jember",
+  description: "My Dream Organizer Jember melayani Wedding, Event, dan Birthday dengan konsep yang berkesan dan sesuai kebutuhan Anda. Pasti Nikahmu BEDA!",
+  keywords: [
+    "My Dream Organizer",
+    "wedding organizer jember",
+    "event organizer jember",
+    "birthday organizer jember",
+    "WO jember",
+    "Pasti Nikahmu BEDA",
+    "My Dream Group Jember",
+    "paket pernikahan jember"
+  ],
+  authors: [{ name: "My Dream Organizer" }],
+  openGraph: {
+    title: "My Dream Organizer | Wedding, Event & Birthday Organizer Jember",
+    description: "My Dream Organizer Jember melayani Wedding, Event, dan Birthday dengan konsep yang berkesan dan sesuai kebutuhan Anda. Pasti Nikahmu BEDA!",
+    url: "https://mydreamorganizer.com",
+    siteName: "My Dream Organizer",
+    locale: "id_ID",
+    type: "website",
+    images: [
+      {
+        url: "/images/logo.webp",
+        width: 600,
+        height: 600,
+        alt: "My Dream Organizer - Pasti Nikahmu BEDA!",
+      },
+    ],
+  },
   icons: {
-    icon: '/images/logo.png',
-    apple: '/images/logo.png',
+    icon: '/images/logo.webp',
+    apple: '/images/logo.webp',
   }
 };
 
@@ -46,37 +72,36 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "Galipat Wedding Organizer",
-              "alternateName": ["Galipat WO", "Kantor Galipat Wedding Organizer"],
-              "description": "Galipat Wedding Organizer — Partner for your Wedding Party. Jasa Pernikahan dan Wedding Organizer terpercaya di Boyolali dan Solo Raya.",
-              "url": "https://galipatwo.com",
-              "telephone": "+6288902968424",
-              "email": "galipat.weddingorganizer@gmail.com",
+              "name": "My Dream Organizer",
+              "alternateName": ["My Dream WO", "My Dream Event Organizer", "Part of My Dream Group"],
+              "description": "My Dream Organizer Jember melayani Wedding, Event, dan Birthday dengan konsep yang berkesan dan sesuai kebutuhan Anda. Pasti Nikahmu BEDA!",
+              "url": "https://mydreamorganizer.com",
+              "telephone": "+6281233779967",
+              "email": "organizermydream@gmail.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Jl. Prof. Soeharso Tegalmulyo Timur No.4, Karanggeneng",
-                "addressLocality": "Boyolali",
-                "addressRegion": "Jawa Tengah",
-                "postalCode": "57312",
+                "streetAddress": "Jember",
+                "addressLocality": "Jember",
+                "addressRegion": "Jawa Timur",
+                "postalCode": "68121",
                 "addressCountry": "ID"
+              },
+              "parentOrganization": {
+                "@type": "Organization",
+                "name": "My Dream Group"
               },
               "contactPoint": [
                 {
                   "@type": "ContactPoint",
-                  "telephone": "+6288902968424",
-                  "contactType": "customer service & wedding consultation",
+                  "telephone": "+6281233779967",
+                  "contactType": "customer service & wedding event consultation",
                   "areaServed": "ID",
-                  "availableLanguage": ["Indonesian", "Javanese"]
+                  "availableLanguage": ["Indonesian"]
                 }
               ],
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "76"
-              },
               "sameAs": [
-                "https://linktr.ee/galipatwo",
-                "mailto:galipat.weddingorganizer@gmail.com"
+                "https://instagram.com/mydreamorganizer",
+                "https://wa.me/6281233779967"
               ]
             })
           }}

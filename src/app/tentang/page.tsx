@@ -2,8 +2,8 @@ import React from 'react';
 import PageHeader from '@/components/PageHeader';
 
 export const metadata = {
-  title: 'Tentang Kami — Galipat Wedding Organizer Boyolali',
-  description: 'Mengenal sejarah, nilai luhur adat Jawa, dan komitmen tim profesional Galipat Wedding Organizer di Boyolali & Solo Raya.',
+  title: 'Tentang Kami — My Dream Organizer Jember',
+  description: 'Mengenal filosofi, visi, dan komitmen tim profesional My Dream Organizer (Part of My Dream Group) di Jember, Jawa Timur. Pasti Nikahmu BEDA!',
 };
 
 export default function AboutPage() {
@@ -11,8 +11,8 @@ export default function AboutPage() {
     <main>
       <PageHeader
         eyebrow="Filosofi &amp; Dedikasi"
-        title="Tentang Galipat"
-        description="Menjaga kemuliaan tata krama adat Jawa dan menghadirkan ketenangan batin dalam setiap perhelatan pernikahan suci di Boyolali dan Solo Raya."
+        title="Tentang My Dream Organizer"
+        description="Bukan sekadar mengatur acara, tetapi membantu menciptakan momen yang berkesan bagi setiap insan dan keluarga."
         breadcrumbs={[
           { label: 'Beranda', href: '/' },
           { label: 'Tentang Kami' },
@@ -26,8 +26,8 @@ export default function AboutPage() {
             <div className="lg:col-span-5">
               <div className="aspect-[4/5] overflow-hidden rounded-sm border border-outline-variant/30 shadow-sm bg-black/5">
                 <img
-                  src="/images/hero-portrait.png"
-                  alt="Filosofi Galipat Wedding Organizer"
+                  src="/images/hero-portrait.webp"
+                  alt="Filosofi My Dream Organizer"
                   className="w-full h-full object-cover"
                   width={600}
                   height={750}
@@ -36,26 +36,33 @@ export default function AboutPage() {
             </div>
             <div className="lg:col-span-7 space-y-5 sm:space-y-6">
               <span className="font-label-md text-secondary uppercase tracking-[0.2em] text-xs block font-semibold">
-                Perjalanan Kami Sejak 2016
+                Part of My Dream Group
               </span>
               <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-primary font-semibold leading-tight">
-                Pernikahan Bukan Sekadar Pesta, Melainkan Amanah Martabat Dua Keluarga.
+                Pasti Nikahmu BEDA!
               </h2>
               <p className="font-body text-sm sm:text-base text-on-surface-variant font-light leading-relaxed">
-                Di tanah Boyolali yang tenteram di lereng Merbabu-Merapi, prosesi pernikahan memuat doa panjang orang tua dan kehormatan silsilah keluarga. Galipat didirikan pada tahun 2016 dari pemahaman bahwa pesta yang indah tidak boleh menyisakan kelelahan emosional bagi pengantin maupun keluarga besar.
+                Di <strong>My Dream Organizer</strong>, kami meyakini bahwa setiap acara — baik itu akad pernikahan sakral, resepsi megah, perayaan ulang tahun, hingga gala event perusahaan — adalah perwujudan impian dan martabat berharga.
               </p>
               <p className="font-body text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">
-                Kami hadir sebagai orkestrator yang menjaga ketenangan batin Anda. Dari penataan uba rampe siraman, bimbingan paes ageng, hingga penyambutan tamu kehormatan, setiap babak diiringi keanggunan yang tertata rapi tanpa kepanikan.
+                Berbasis di <strong>Jember, Jawa Timur</strong> dan berada di bawah naungan <strong>My Dream Group</strong>, kami hadir dengan visi yang jelas: <em>bukan sekadar mengatur susunan acara di atas kertas, melainkan menghadirkan ketenangan batin, kehangatan emosional, dan eksekusi yang berkesan sepanjang masa.</em>
               </p>
 
-              <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="p-4 sm:p-5 bg-white border border-outline-variant/30 rounded-sm">
-                  <span className="font-display text-2xl sm:text-3xl font-bold text-primary">1.000+</span>
-                  <p className="text-xs text-on-surface-variant font-medium mt-1">Pernikahan Terselenggara</p>
+              <div className="grid grid-cols-3 gap-3 pt-2">
+                <div className="p-4 bg-white border border-outline-variant/30 rounded-sm text-center">
+                  <span className="material-symbols-outlined text-gold-shimmer text-2xl mb-1">favorite</span>
+                  <p className="font-display text-sm sm:text-base font-bold text-primary">Wedding</p>
+                  <p className="text-[10px] text-on-surface-variant">Sakral &amp; Penuh Cinta</p>
                 </div>
-                <div className="p-4 sm:p-5 bg-white border border-outline-variant/30 rounded-sm">
-                  <span className="font-display text-2xl sm:text-3xl font-bold text-primary">50+</span>
-                  <p className="text-xs text-on-surface-variant font-medium mt-1">Vendor Kurasi Terpercaya</p>
+                <div className="p-4 bg-white border border-outline-variant/30 rounded-sm text-center">
+                  <span className="material-symbols-outlined text-gold-shimmer text-2xl mb-1">business_center</span>
+                  <p className="font-display text-sm sm:text-base font-bold text-primary">Event</p>
+                  <p className="text-[10px] text-on-surface-variant">Rapi &amp; Berkelas</p>
+                </div>
+                <div className="p-4 bg-white border border-outline-variant/30 rounded-sm text-center">
+                  <span className="material-symbols-outlined text-gold-shimmer text-2xl mb-1">cake</span>
+                  <p className="font-display text-sm sm:text-base font-bold text-primary">Birthday</p>
+                  <p className="text-[10px] text-on-surface-variant">Kreatif &amp; Meriah</p>
                 </div>
               </div>
             </div>
@@ -71,129 +78,111 @@ export default function AboutPage() {
               Prinsip Kerja
             </span>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-primary font-semibold">
-              Pilar Dedikasi Galipat
+              Pilar Dedikasi My Dream Organizer
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 border border-outline-variant/30 rounded-sm space-y-3 shadow-sm">
               <span className="material-symbols-outlined text-gold-shimmer text-3xl">auto_awesome</span>
-              <h3 className="font-display text-base font-semibold text-primary">Pakem Adiluhung</h3>
+              <h3 className="font-display text-base font-semibold text-primary">Konsep Tematik Kustom</h3>
               <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">
-                Memahami esensi filosofis adat Jawa Solo dan Yogyakarta tanpa meninggalkan sentuhan elegan.
+                Kami merancang konsep visual, tata ruang, dan alur acara yang unik sesuai jati diri Anda. Pasti Nikahmu BEDA!
               </p>
             </div>
             <div className="bg-white p-6 border border-outline-variant/30 rounded-sm space-y-3 shadow-sm">
               <span className="material-symbols-outlined text-gold-shimmer text-3xl">self_improvement</span>
-              <h3 className="font-display text-base font-semibold text-primary">Ketenangan Pengantin</h3>
+              <h3 className="font-display text-base font-semibold text-primary">Ketenangan Klien</h3>
               <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">
-                Personal bride assistant yang siaga mendampingi sejak subuh rias hingga resepsi selesai.
+                Pendampingan menyeluruh dan personal concierge yang siap merespons kebutuhan Anda sehingga Anda bisa menikmati acara tanpa stres.
               </p>
             </div>
             <div className="bg-white p-6 border border-outline-variant/30 rounded-sm space-y-3 shadow-sm">
               <span className="material-symbols-outlined text-gold-shimmer text-3xl">timer</span>
-              <h3 className="font-display text-base font-semibold text-primary">Presisi Waktu</h3>
+              <h3 className="font-display text-base font-semibold text-primary">Presisi Rundown</h3>
               <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">
-                Master rundown tersinkronisasi antar katering, dekorasi, MC, dan penghulu tanpa jeda canggung.
+                Manajemen waktu yang disiplin dan koordinasi sinkron dengan katering, vendor dekorasi, audio, dan pengisi acara.
               </p>
             </div>
             <div className="bg-white p-6 border border-outline-variant/30 rounded-sm space-y-3 shadow-sm">
               <span className="material-symbols-outlined text-gold-shimmer text-3xl">handshake</span>
-              <h3 className="font-display text-base font-semibold text-primary">Transparansi Anggaran</h3>
+              <h3 className="font-display text-base font-semibold text-primary">Transparansi Nyata</h3>
               <p className="text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">
-                Estimasi biaya terbuka tanpa markup tersembunyi, disesuaikan dengan kapasitas keluarga.
+                Rencana anggaran biaya (RAB) yang terbuka, fleksibel sesuai budget, tanpa biaya tak terduga di tengah jalan.
               </p>
             </div>
           </div>
         </div>
       </section>
+
       {/* Official Business & Location Info */}
       <section className="py-12 sm:py-16 md:py-20 bg-surface">
         <div className="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white border border-outline-variant/30 rounded-sm p-6 sm:p-10 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-xs text-amber-700 font-semibold">
-                  <span>⭐ 4.8 Rating Sempurna</span>
-                  <span>•</span>
-                  <span>76 Ulasan Terverifikasi Google</span>
-                </div>
+                <span className="font-label-md text-secondary text-xs uppercase tracking-[0.2em] font-semibold block">
+                  Informasi Resmi
+                </span>
                 <h3 className="font-display text-2xl sm:text-3xl text-primary font-semibold">
-                  Kantor Galipat Wedding Organizer
+                  My Dream Organizer Jember
                 </h3>
                 <p className="font-body text-xs sm:text-sm text-on-surface-variant font-light leading-relaxed">
-                  Mitra pernikahan terpercaya (“Partner for your Wedding Party”) yang mengutamakan ketenangan, kerapian prosesi, dan transparansi anggaran di Boyolali &amp; Solo Raya.
+                  Layanan resmi Wedding, Event &amp; Birthday Organizer di bawah naungan <strong>My Dream Group</strong>. Kami siap membantu Anda mewujudkan perayaan berkesan dengan standar eksekusi terbaik.
                 </p>
-                <div className="space-y-2.5 pt-2 text-xs sm:text-sm text-on-surface">
+                <div className="space-y-3 pt-2 text-xs sm:text-sm text-on-surface font-body">
                   <div className="flex items-start gap-3">
                     <span className="material-symbols-outlined text-gold-shimmer text-xl flex-shrink-0 mt-0.5">location_on</span>
-                    <span>
-                      <strong className="text-primary font-medium">Location:</strong> Jl. Prof. Soeharso Tegalmulyo Timur No.4, Karanggeneng, Boyolali, Jawa Tengah 57312
-                    </span>
+                    <div>
+                      <strong className="text-primary font-medium">Lokasi:</strong> Jember, Jawa Timur
+                      <span className="block text-xs text-on-surface-variant/70">Melayani area Jember, Banyuwangi, Bondowoso, Lumajang, Situbondo &amp; sekitarnya.</span>
+                    </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="material-symbols-outlined text-gold-shimmer text-xl flex-shrink-0">chat</span>
-                    <span>
-                      <strong className="text-primary font-medium">WA Admin:</strong> 0889-0296-8424
-                    </span>
+                    <div>
+                      <strong className="text-primary font-medium">WhatsApp:</strong>{' '}
+                      <a href="https://wa.me/6281233779967" target="_blank" rel="noopener noreferrer" className="hover:text-gold-shimmer underline">
+                        0812-3377-9967
+                      </a>
+                    </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-gold-shimmer text-xl flex-shrink-0">person_pin</span>
-                    <span>
-                      <strong className="text-primary font-medium">CEO / Owner:</strong> Konsultasi Langsung via Linktree
-                    </span>
+                    <span className="material-symbols-outlined text-gold-shimmer text-xl flex-shrink-0">photo_camera</span>
+                    <div>
+                      <strong className="text-primary font-medium">Instagram:</strong>{' '}
+                      <a href="https://instagram.com/mydreamorganizer" target="_blank" rel="noopener noreferrer" className="hover:text-gold-shimmer underline">
+                        @mydreamorganizer
+                      </a>
+                    </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="material-symbols-outlined text-gold-shimmer text-xl flex-shrink-0">mail</span>
-                    <span>
-                      <strong className="text-primary font-medium">Email:</strong> galipat.weddingorganizer@gmail.com
-                    </span>
+                    <div>
+                      <strong className="text-primary font-medium">Email:</strong>{' '}
+                      <a href="mailto:organizermydream@gmail.com" className="hover:text-gold-shimmer underline">
+                        organizermydream@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="lg:col-span-5 bg-surface-container-low p-6 rounded-sm border border-outline-variant/30 space-y-4 text-center">
+              <div className="lg:col-span-5 bg-surface-container-low p-6 sm:p-8 rounded-sm border border-outline-variant/30 space-y-4 text-center">
                 <span className="font-label-md text-xs uppercase tracking-widest text-secondary font-semibold block">
-                  4 Kanal Resmi Linktree
+                  Konsultasi Langsung
                 </span>
-                <p className="font-body text-xs text-on-surface-variant leading-relaxed">
-                  Akses langsung layanan resmi Galipat Wedding Organizer:
+                <p className="font-body text-xs text-on-surface-variant leading-relaxed font-light">
+                  Ingin berdiskusi mengenai konsep acara atau request penawaran paket khusus? Hubungi tim concierge kami sekarang:
                 </p>
-                <div className="flex flex-col gap-2 pt-1 text-xs">
+                <div className="pt-2">
                   <a
-                    href="https://wa.me/6288902968424?text=Halo%20Admin%20Galipat%20Wedding%20Organizer%2C%20saya%20ingin%20konsultasi%20paket%20pernikahan"
+                    href="https://wa.me/6281233779967?text=Halo%20My%20Dream%20Organizer%20Jember%2C%20saya%20ingin%20konsultasi%20acara"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 min-h-[42px] px-5 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md tracking-wider uppercase transition-colors rounded-sm font-bold shadow-sm"
+                    className="inline-flex items-center justify-center gap-2 min-h-[46px] w-full px-5 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs tracking-wider uppercase transition-colors rounded-sm font-bold shadow-sm"
                   >
                     <span className="material-symbols-outlined text-base">chat</span>
-                    1. WA Admin (0889-0296-8424)
-                  </a>
-                  <a
-                    href="https://linktr.ee/galipatwo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 min-h-[42px] px-5 bg-primary hover:bg-primary-container text-white font-label-md tracking-wider uppercase transition-colors rounded-sm font-semibold"
-                  >
-                    <span className="material-symbols-outlined text-base">person_pin</span>
-                    2. CEO Consultation
-                  </a>
-                  <a
-                    href="https://maps.google.com/?q=Kantor+Galipat+Wedding+Organizer+Jl.+Prof.+Soeharso+Tegalmulyo+Timur+No.4+Karanggeneng+Boyolali"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 min-h-[40px] px-5 bg-white border border-outline-variant/60 hover:border-gold-shimmer text-primary font-label-md tracking-wider uppercase transition-colors rounded-sm font-semibold"
-                  >
-                    <span className="material-symbols-outlined text-base text-gold-shimmer">location_on</span>
-                    3. Location (Peta Google Maps)
-                  </a>
-                  <a
-                    href="https://linktr.ee/galipatwo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 min-h-[38px] px-5 bg-surface-container-high hover:bg-surface-container text-primary font-label-md tracking-wider uppercase transition-colors rounded-sm font-medium"
-                  >
-                    <span className="material-symbols-outlined text-base">hub</span>
-                    4. Portal Linktree (linktr.ee/galipatwo)
+                    WhatsApp 0812-3377-9967
                   </a>
                 </div>
               </div>

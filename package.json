@@ -1,7 +1,7 @@
 {
-  "name": "galipat-wo",
+  "name": "mydream-organizer",
   "version": "1.0.0",
-  "description": "Website Resmi Galipat Wedding Organizer Boyolali",
+  "description": "Website Resmi My Dream Organizer Jember — Wedding, Event & Birthday Organizer. Pasti Nikahmu BEDA!",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

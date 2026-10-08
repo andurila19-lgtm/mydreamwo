@@ -27,13 +27,12 @@ export default function Navbar() {
   }, [pathname]);
 
   const navLinks = [
-    { name: 'Beranda', href: '/' },
-    { name: 'Paket', href: '/paket' },
-    { name: 'Wedding Show', href: '/wedding-show' },
-    { name: 'Test Food', href: '/test-food' },
-    { name: 'Galeri', href: '/galeri' },
-    { name: 'Tips', href: '/tips' },
-    { name: 'Tentang', href: '/tentang' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/tentang' },
+    { name: 'Services', href: '/paket' },
+    { name: 'Portfolio', href: '/galeri' },
+    { name: 'Digital Invitation', href: '/undangan' },
+    { name: 'Contact', href: 'https://wa.me/6281233779967?text=Halo%20My%20Dream%20Organizer%20Jember%2C%20saya%20ingin%20konsultasi' },
   ];
 
   return (
@@ -44,8 +43,8 @@ export default function Navbar() {
         aria-label="Navigasi Desktop"
         className={`hidden lg:block w-full transition-all duration-300 ${
           scrolled
-            ? 'bg-[#162035]/95 backdrop-blur-md border-b border-white/10 shadow-lg py-3'
-            : 'bg-transparent border-b border-white/15 py-4'
+            ? 'bg-[#0f172a]/95 backdrop-blur-md border-b border-white/10 shadow-lg py-2.5'
+            : 'bg-transparent border-b border-white/15 py-3.5'
         }`}
       >
         <div className="max-w-container-max mx-auto px-6 lg:px-8 flex justify-between items-center">
@@ -53,36 +52,48 @@ export default function Navbar() {
           <a
             href="/"
             className="flex items-center gap-3 py-0.5 focus:outline-none rounded group"
-            aria-label="Galipat Wedding Organizer - Beranda"
+            aria-label="My Dream Organizer - Beranda"
           >
-            <img
-              src="/images/logo.png"
-              alt="Galipat Wedding Organizer"
-              className="h-10 xl:h-11 w-10 xl:w-11 rounded-full object-cover shadow-md border border-white/20 group-hover:scale-105 transition-all"
-              width={44}
-              height={44}
-            />
+            <div className="h-11 w-11 rounded-lg overflow-hidden bg-black border border-amber-400/40 shadow-md group-hover:scale-105 transition-all p-0.5 flex items-center justify-center">
+              <img
+                src="/images/logo.webp"
+                alt="My Dream Organizer"
+                className="w-full h-full object-contain"
+                width={44}
+                height={44}
+              />
+            </div>
             <div className="flex flex-col text-left">
               <span className="font-display text-lg xl:text-xl font-bold tracking-wider text-white group-hover:text-gold-shimmer transition-colors leading-tight">
-                GALIPAT
+                MY DREAM
               </span>
-              <span className="font-label-md text-[9px] tracking-[0.22em] text-gold-shimmer uppercase font-semibold">
-                WEDDING ORGANIZER
-              </span>
+              <div className="flex items-center gap-1.5">
+                <span className="font-label-md text-[9px] tracking-[0.22em] text-gold-shimmer uppercase font-semibold">
+                  ORGANIZER
+                </span>
+                <span className="text-[8px] text-white/50 tracking-wider">
+                  • JEMBER
+                </span>
+              </div>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="flex items-center gap-6 xl:gap-8">
+          <div className="flex items-center gap-6 xl:gap-7">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
+              const isExternal = link.href.startsWith('http');
               return (
                 <a
                   key={link.name}
                   href={link.href}
+                  target={isExternal ? '_blank' : undefined}
+                  rel={isExternal ? 'noopener noreferrer' : undefined}
                   className={`font-body text-sm tracking-wide transition-all py-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] ${
                     isActive
                       ? 'text-gold-shimmer font-semibold border-b-2 border-gold-shimmer'
+                      : link.name === 'Digital Invitation'
+                      ? 'text-gold-shimmer/90 hover:text-gold-shimmer font-medium'
                       : 'text-white/90 hover:text-gold-shimmer font-normal'
                   }`}
                 >
@@ -91,12 +102,12 @@ export default function Navbar() {
               );
             })}
             <a
-              href="https://wa.me/6288902968424?text=Halo%20Galipat%20Wedding%20Organizer%20Boyolali%2C%20saya%20ingin%20konsultasi%20paket%20pernikahan"
+              href="https://wa.me/6281233779967?text=Halo%20My%20Dream%20Organizer%20Jember%2C%20saya%20ingin%20konsultasi%20wedding%20%26%20event"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center min-h-[42px] px-6 bg-gold-shimmer hover:bg-secondary hover:text-white text-primary font-label-md text-xs tracking-widest uppercase transition-colors rounded-sm font-semibold shadow-md"
             >
-              KONSULTASI
+              KONSULTASI WA
             </a>
           </div>
         </div>
@@ -110,20 +121,22 @@ export default function Navbar() {
           aria-label="Navigasi Utama Mobile"
         >
           {/* Logo Mobile */}
-          <a href="/" className="flex items-center gap-2" aria-label="Galipat Wedding Organizer Boyolali">
-            <img
-              src="/images/logo.png"
-              alt="Galipat Wedding Organizer Boyolali"
-              className="h-8 w-8 rounded-full object-cover border border-white/20"
-              width={32}
-              height={32}
-            />
+          <a href="/" className="flex items-center gap-2" aria-label="My Dream Organizer Jember">
+            <div className="h-8 w-8 rounded-lg overflow-hidden bg-black border border-amber-400/30 p-0.5 flex items-center justify-center">
+              <img
+                src="/images/logo.webp"
+                alt="My Dream Organizer"
+                className="w-full h-full object-contain"
+                width={32}
+                height={32}
+              />
+            </div>
             <div className="flex flex-col text-left">
               <span className="font-display text-sm font-bold tracking-wider text-white leading-none">
-                GALIPAT
+                MY DREAM
               </span>
               <span className="font-label-md text-[7.5px] tracking-[0.18em] text-gold-shimmer uppercase font-semibold">
-                WEDDING ORGANIZER
+                ORGANIZER
               </span>
             </div>
           </a>
@@ -131,10 +144,10 @@ export default function Navbar() {
           {/* Action & Hamburger Button */}
           <div className="flex items-center gap-2">
             <a
-              href="https://wa.me/6288902968424?text=Halo%20Galipat%20Wedding%20Organizer%20Boyolali"
+              href="https://wa.me/6281233779967?text=Halo%20My%20Dream%20Organizer%20Jember%2C%20saya%20ingin%20konsultasi"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center min-h-[36px] px-3.5 bg-gold-shimmer text-primary font-label-md text-[11px] tracking-wider uppercase rounded-full font-bold shadow-sm"
+              className="inline-flex items-center justify-center px-3 py-1.5 bg-gold-shimmer text-primary font-label-md text-[10.5px] tracking-wider uppercase rounded-full font-bold shadow-xs"
             >
               KONSUL
             </a>
@@ -176,7 +189,7 @@ export default function Navbar() {
             })}
             <div className="pt-3 mt-2 border-t border-white/10">
               <a
-                href="https://wa.me/6288902968424?text=Halo%20Galipat%20Wedding%20Organizer%20Boyolali%2C%20saya%20ingin%20konsultasi%20paket%20pernikahan"
+                href="https://wa.me/6281233779967?text=Halo%20My%20Dream%20Organizer%20Jember%2C%20saya%20ingin%20konsultasi%20wedding%20%26%20event"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}

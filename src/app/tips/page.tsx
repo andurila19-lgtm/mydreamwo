@@ -3,8 +3,8 @@ import { tipsData } from '@/data/tips';
 import PageHeader from '@/components/PageHeader';
 
 export const metadata = {
-  title: 'Tips & Panduan Pernikahan — Galipat Wedding Organizer Boyolali',
-  description: 'Kumpulan tips, panduan adat Jawa, perhitungan katering, dan checklist persiapan pernikahan dari tim ahli Galipat.',
+  title: 'Tips & Panduan Acara — My Dream Organizer Jember',
+  description: 'Kumpulan tips seputar konsep pernikahan, perhitungan porsi katering, dan checklist timeline persiapan acara dari tim ahli My Dream Organizer Jember.',
 };
 
 export default function TipsPage() {
@@ -12,8 +12,8 @@ export default function TipsPage() {
     <main>
       <PageHeader
         eyebrow="Inspirasi &amp; Wawasan"
-        title="Tips &amp; Panduan Pernikahan"
-        description="Wawasan seputar tata krama adat Jawa, manajemen anggaran, dan panduan teknis agar persiapan hari bahagia Anda berjalan tenang."
+        title="Tips &amp; Panduan Acara"
+        description="Wawasan seputar konsep acara tematik, manajemen anggaran katering, dan panduan teknis agar persiapan hari bahagia Anda berjalan lancar tanpa stres."
         breadcrumbs={[
           { label: 'Beranda', href: '/' },
           { label: 'Tips & Panduan' },
@@ -59,7 +59,7 @@ export default function TipsPage() {
                 <div className="p-6 sm:p-7 pt-0">
                   <a
                     href={`/tips/${tip.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-label-md uppercase tracking-wider text-primary hover:text-gold-shimmer font-semibold"
+                    className="inline-flex items-center gap-1.5 text-xs font-label-md uppercase tracking-wider text-primary font-semibold hover:text-gold-shimmer transition-colors"
                   >
                     Baca Selengkapnya <span className="material-symbols-outlined text-sm">arrow_forward</span>
                   </a>

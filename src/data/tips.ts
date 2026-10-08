@@ -13,51 +13,51 @@ export interface TipItem {
 export const tipsData: TipItem[] = [
   {
     id: 't1',
-    slug: 'panduan-memilih-paes-ageng-solo-putri',
-    title: 'Mengenal Perbedaan Paes Ageng Yogyakarta dan Solo Putri untuk Hari Bahagia Anda',
-    category: 'Tradisi & Adat',
-    date: '14 Agustus 2024',
+    slug: 'panduan-memilih-konsep-wedding-modern-tradisional',
+    title: 'Pasti Nikahmu BEDA: Memilih Konsep Wedding Impian Antara Sentuhan Modern & Tradisi',
+    category: 'Konsep & Tema',
+    date: '20 September 2025',
     readTime: '4 menit baca',
-    excerpt: 'Memahami makna filosofis di balik cengkeh, godheg, dan cunduk mentul agar riasan pengantin memancarkan aura sakral.',
-    image: '/images/hero-portrait.png',
+    excerpt: 'Bagaimana memadukan kesakralan tradisi keluarga dengan estetika modern masa kini agar pesta pernikahan Anda terasa unik dan berkesan.',
+    image: '/images/hero-portrait.webp',
     content: [
-      'Pernikahan adat Jawa kaya akan simbolisme luhur. Paes yang dilukis di dahi calon pengantin bukan sekadar estetika riasan, melainkan doa suci bagi ketentraman rumah tangga.',
-      'Paes Solo Putri menonjolkan bentuk daun sirih melengkung halus dengan warna hitam pekat yang melambangkan kelembutan hati dan keteguhan iman.',
-      'Sementara Paes Ageng Yogyakarta memiliki tatahan prada emas di tepian paes, memancarkan aura keagungan keraton yang megah.',
-      'Tim Galipat selalu mendampingi calon pengantin dalam berkonsultasi dengan perias paes senior agar riasan selaras dengan postur tubuh dan busana yang dipilih.'
+      'Setiap pasangan memiliki cerita cinta yang unik. Karena itu, pernikahan Anda tidak harus terlihat sama seperti pernikahan orang lain — sesuai moto kami di My Dream Organizer: "Pasti Nikahmu BEDA!".',
+      'Memadukan unsur tradisi yang sakral dengan sentuhan visual kontemporer membutuhkan harmonisasi yang matang: mulai dari palet warna busana, dekorasi pelaminan, hingga alur prosesi temu pengantin.',
+      'Kunci utama adalah mengidentifikasi bagian mana dari prosesi adat yang paling esensial bagi orang tua, lalu membalutnya dengan ritme acara yang dinamis dan menyenangkan bagi rekan-rekan generasi muda.',
+      'Tim konseptor My Dream Organizer selalu siap menyusun moodboard tematik kustom yang disesuaikan dengan kepribadian kedua mempelai.'
     ]
   },
   {
     id: 't2',
-    slug: 'tips-menghitung-porsi-catering-pernikahan',
-    title: 'Cara Tepat Menghitung Porsi Catering Agar Tidak Kurang Tanpa Membengkakkan Budget',
+    slug: 'cara-menghitung-anggaran-dan-porsi-katering-efektif',
+    title: 'Panduan Menghitung Porsi Katering & Anggaran Acara Agar Tidak Boros Maupun Kekurangan',
     category: 'Anggaran & Katering',
-    date: '28 Juli 2024',
+    date: '12 Agustus 2025',
     readTime: '5 menit baca',
-    excerpt: 'Rumus realistis rasio prasmanan dan gubukan berdasarkan kebiasaan tamu di wilayah Boyolali dan Solo Raya.',
-    image: '/images/ballroom-candid.png',
+    excerpt: 'Rumus realistis rasio buffet utama dan aneka food stall gubukan agar jamuan tamu di pesta Anda terhidang melimpah dan tertata elegan.',
+    image: '/images/ballroom-candid.webp',
     content: [
-      'Kekurangan makanan adalah kekhawatiran nomor satu bagi orang tua mempelai. Menghitung porsi katering memerlukan rumus rasio yang teruji.',
-      'Rumus umum: Jika mengundang 500 undangan (1.000 orang), rasio ideal adalah 60% menu prasmanan (600 porsi) dan total gubukan sebanyak 4-5 kali lipat jumlah undangan (2.000–2.500 porsi gubukan).',
-      'Pilihlah vendor katering yang terbiasa menangani *flow management* tamu agar refill makanan berjalan lancar tanpa antrean panjang.',
-      'Galipat memastikan tim floor coordinator katering siaga memantau kapasitas hidangan di setiap meja buffet secara real-time.'
+      'Jamuan katering adalah jantung kehormatan keluarga dalam menjamu para tamu undangan. Kekhawatiran makanan habis sebelum acara selesai dapat dihindari dengan kalkulasi rasio yang teruji.',
+      'Rumus aman: Jika Anda menyebar 400 undangan (estimasi 800 tamu hadir), alokasikan 500–600 porsi buffet utama ditambah 4 hingga 5 kali lipat porsi gubukan (2.000–2.500 porsi stall).',
+      'Pastikan juga vendor katering memiliki tim replenishment yang responsif dan floor management yang terkoordinasi dengan tim wedding organizer di lapangan.',
+      'My Dream Organizer menyediakan personal food-coordinator khusus untuk memantau kapasitas setiap stall makanan secara real-time sepanjang resepsi berlangsung.'
     ]
   },
   {
     id: 't3',
-    slug: 'tahapan-persiapan-pernikahan-h-min-6-bulan',
-    title: 'Checklist Lengkap Persiapan Pernikahan dari H-6 Bulan Hingga Hari-H',
+    slug: 'checklist-timeline-persiapan-event-dan-wedding-h-6-bulan',
+    title: 'Timeline Terstruktur Persiapan Wedding & Event: Dari Penentuan Konsep Hingga Hari-H',
     category: 'Manajemen Waktu',
-    date: '10 Juni 2024',
+    date: '05 Juli 2025',
     readTime: '6 menit baca',
-    excerpt: 'Jadwal terstruktur mengunci venue favorit, fitting busana, technical meeting, dan gladi resik.',
-    image: '/images/wedding-artifacts.jpg',
+    excerpt: 'Checklist terperinci mengunci venue, kurasi vendor dekorasi, technical meeting, dan simulasi gladi resik agar acara bebas stres.',
+    image: '/images/wedding-artifacts.webp',
     content: [
-      'Mempersiapkan pernikahan tanpa kepanikan membutuhkan timeline yang disiplin.',
-      'H-6 Bulan: Kunci tanggal, kunci venue, dan tentukan wedding organizer utama Anda.',
-      'H-3 Bulan: Selesaikan kurasi dekorasi, fotografer, katering, dan lakukan food tasting bersama keluarga besar.',
-      'H-1 Bulan: Laksanakan Technical Meeting bersama seluruh vendor untuk sinkronisasi master rundown.',
-      'H-1 Minggu: Gladi resik prosesi akad nikah dan panggih bersama pemandu adat dan orang tua.'
+      'Mewujudkan acara berkesan tanpa panik membutuhkan manajemen waktu yang disiplin dan transparan.',
+      'H-6 Bulan: Tentukan tanggal, skala acara, budget plafon, dan pilih My Dream Organizer sebagai mitra pengarah acara Anda.',
+      'H-4 Bulan: Kunci venue pilihan di Jember, selesaikan kurasi katering, gaun pengantin, serta tema dekorasi visual.',
+      'H-1 Bulan: Technical meeting gabungan bersama seluruh vendor untuk sinkronisasi master rundown menit ke menit.',
+      'H-1 Minggu: Final briefing keluarga, pengumpulan seserahan/properti, dan gladi resik bersama tim organizer.'
     ]
   }
 ];
